@@ -2,6 +2,8 @@ import React, { Component } from "react";
 import "./directory.scss";
 import MenuItem from "../menu-item/menu-item";
 
+// component containing a menu introducing each collection section(menu-item.js)
+
 class Directory extends Component {
   // Composant contenant les differentes categories du magasin sur la HomePage
   constructor(props) {

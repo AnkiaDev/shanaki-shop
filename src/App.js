@@ -3,6 +3,7 @@ import { Route } from "react-router-dom";
 import "./App.css";
 
 import HomePage from "./pages/homepage/homepage";
+import ShopPage from "./pages/shop/shop";
 
 const JewelryPage = () => (
   <div>
@@ -29,6 +30,7 @@ function App() {
       <Route path="/jewelry" component={JewelryPage} />
       <Route path="/clothing" component={ClothingPage} />
       <Route path="/stones" component={StonePage} />
+      <Route path="/shop" component={ShopPage} />
     </div>
   );
 }
