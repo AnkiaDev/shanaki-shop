@@ -1,5 +1,7 @@
 import React from "react";
+
 import "./collection-preview.scss";
+
 import CollectionItem from "../collection-item/collection-item";
 
 // Component who display a 4 items preview for each collection section in the shop page(shop.js)

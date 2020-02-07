@@ -1,9 +1,13 @@
 import React from "react";
-import { Route } from "react-router-dom";
+import { Route, Switch } from "react-router-dom";
+
+//Style
 import "./App.css";
 
+//Pages
 import HomePage from "./pages/homepage/homepage";
 import ShopPage from "./pages/shop/shop";
+import Header from "./components/header/header-component";
 
 const JewelryPage = () => (
   <div>
@@ -26,11 +30,14 @@ const StonePage = () => (
 function App() {
   return (
     <div>
-      <Route exact path="/" component={HomePage} />
-      <Route path="/jewelry" component={JewelryPage} />
-      <Route path="/clothing" component={ClothingPage} />
-      <Route path="/stones" component={StonePage} />
-      <Route path="/shop" component={ShopPage} />
+      <Header />
+      <Switch>
+        <Route exact path="/" component={HomePage} />
+        <Route path="/jewelry" component={JewelryPage} />
+        <Route path="/clothing" component={ClothingPage} />
+        <Route path="/stones" component={StonePage} />
+        <Route path="/shop" component={ShopPage} />
+      </Switch>
     </div>
   );
 }

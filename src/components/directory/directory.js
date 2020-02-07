@@ -1,5 +1,7 @@
 import React, { Component } from "react";
+
 import "./directory.scss";
+
 import MenuItem from "../menu-item/menu-item";
 
 // component containing a menu introducing each collection section(menu-item.js)

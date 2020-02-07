@@ -1,7 +1,10 @@
 import React, { Component } from "react";
+
 import "./shop.scss";
+
 import SHOP_DATA from "./shop-data";
 import CollectionPreview from "../../components/collection-preview/collection-preview";
+import Header from "../../components/header/header-component";
 
 /* Page containing a component who display a 4 items preview for each collection section in the shop page(shop.js)*/
 
@@ -14,7 +17,6 @@ class ShopPage extends Component {
     const { collections } = this.state;
     return (
       <div>
-        <h1>SHOP PAGE</h1>
         {collections.map(({ id, ...otherCollectionProps }) => (
           <CollectionPreview key={id} {...otherCollectionProps} />
         ))}

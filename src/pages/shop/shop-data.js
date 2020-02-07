@@ -1,7 +1,7 @@
 const SHOP_DATA = [
   {
     id: 1,
-    title: "Jewelry",
+    title: "Bijoux",
     routeName: "jewelry",
     items: [
       {
@@ -32,13 +32,13 @@ const SHOP_DATA = [
   },
   {
     id: 2,
-    title: "Clothing",
+    title: "Vêtements",
     routeName: "clothing",
     items: []
   },
   {
     id: 3,
-    title: "Stones",
+    title: "Pierres",
     routeName: "stones",
     items: []
   }

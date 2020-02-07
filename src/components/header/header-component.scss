@@ -1,0 +1,40 @@
+.header {
+  height: 70px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  background-color: #26262b;
+  position: absolute;
+  right: 0;
+  left: 0;
+  top: 0;
+  margin-bottom: 25px;
+
+  .header-title {
+    color: #dfb956;
+    font-family: "JMH Angelus Cap";
+    font-size: 2rem;
+    padding: 10px 15px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+  }
+
+  .logo-container {
+    height: 100%;
+    width: 70px;
+    padding: 25px;
+  }
+
+  .options {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+
+    .option {
+      padding: 10px 15px;
+    }
+  }
+}
