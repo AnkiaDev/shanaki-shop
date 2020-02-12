@@ -4,7 +4,6 @@ import "./shop.scss";
 
 import SHOP_DATA from "./shop-data";
 import CollectionPreview from "../../components/collection-preview/collection-preview";
-import Header from "../../components/header/header-component";
 
 /* Page containing a component who display a 4 items preview for each collection section in the shop page(shop.js)*/
 

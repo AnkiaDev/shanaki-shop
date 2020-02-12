@@ -6,8 +6,9 @@ import "./App.css";
 
 //Pages
 import HomePage from "./pages/homepage/homepage";
-import ShopPage from "./pages/shop/shop";
 import Header from "./components/header/header-component";
+import ShopPage from "./pages/shop/shop";
+import SignInSignUpPage from "./pages/sign-page/sign-in-up-page";
 
 const JewelryPage = () => (
   <div>
@@ -37,6 +38,7 @@ function App() {
         <Route path="/clothing" component={ClothingPage} />
         <Route path="/stones" component={StonePage} />
         <Route path="/shop" component={ShopPage} />
+        <Route path="/signin" component={SignInSignUpPage} />
       </Switch>
     </div>
   );

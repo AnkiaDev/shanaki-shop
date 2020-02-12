@@ -5,7 +5,6 @@ import "./homepage.scss";
 
 //Components
 import Directory from "../../components/directory/directory";
-import Header from "../../components/header/header-component";
 
 /*Principal page, with a header containing shop,about,cart section 
 and a directory component(directory.js) containing a menu introducing each collection section(menu-item.js) */
