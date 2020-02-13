@@ -1,5 +1,6 @@
-import React from "react";
+import React, { Component } from "react";
 import { Route, Switch } from "react-router-dom";
+import { auth } from "./firebase/utils/firebase"; // Firebase authentification
 
 //Style
 import "./App.css";
@@ -28,20 +29,43 @@ const StonePage = () => (
   </div>
 );
 
-function App() {
-  return (
-    <div>
-      <Header />
-      <Switch>
-        <Route exact path="/" component={HomePage} />
-        <Route path="/jewelry" component={JewelryPage} />
-        <Route path="/clothing" component={ClothingPage} />
-        <Route path="/stones" component={StonePage} />
-        <Route path="/shop" component={ShopPage} />
-        <Route path="/signin" component={SignInSignUpPage} />
-      </Switch>
-    </div>
-  );
+class App extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      currentUser: null
+    };
+  }
+
+  unsubscribeFromAuth = null;
+
+  componentDidMount() {
+    this.unsubscribeFromAuth = auth.onAuthStateChanged(user => {
+      this.setState({ currentUser: user });
+
+      console.log(user);
+    });
+  }
+
+  componentWillUnmount() {
+    this.unsubscribeFromAuth();
+  }
+
+  render() {
+    return (
+      <div>
+        <Header isLogged={this.state.currentUser} />
+        <Switch>
+          <Route exact path="/" component={HomePage} />
+          <Route path="/jewelry" component={JewelryPage} />
+          <Route path="/clothing" component={ClothingPage} />
+          <Route path="/stones" component={StonePage} />
+          <Route path="/shop" component={ShopPage} />
+          <Route path="/signin" component={SignInSignUpPage} />
+        </Switch>
+      </div>
+    );
+  }
 }
 
 export default App;
